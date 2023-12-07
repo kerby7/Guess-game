@@ -10,10 +10,11 @@ const displayMessage = function(message){
   document.querySelector('.message').textContent = message;
 }
 
-
 /* Logic for number input and checking with the random number for correct guess */
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
+
+
 
   if (!guess) {
     displayMessage('⛔️ Invalid input');
@@ -41,8 +42,6 @@ document.querySelector('.check').addEventListener('click', function () {
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   number = Math.trunc(Math.random() * 20) + 1;
-  highScore = 0;
-
   // document.querySelector('.message').textContent = 'Start guessing...';
   displayMessage('Start guessing...!');
   document.querySelector('.score').textContent = score;
